@@ -225,12 +225,12 @@
   <!-- Прелоадер -->
   <div id="preloader">
     <div class="plane"></div>
-    <div class="loading-text">Загрузка TowerRush...</div>
+    <div class="loading-text">Загрузка Aviamasters...</div>
   </div>
 
   <div class="container" id="mainContent">
     <div class="video-section">
-      <video id="promoVideo" preload="auto" poster="image/prev.jpg" playsinline>
+      <video id="promoVideo" preload="auto" poster="image/preview.png" playsinline>
         <source src="video/promo.mp4" type="video/mp4">
         Ваш браузер не поддерживает видео.
       </video>
@@ -244,7 +244,7 @@
 
   <div class="popup" id="popup">
     <div class="popup-content">
-      <h3>💰 Вы могли выиграть 36 861 ₽!</h3>
+      <h3>💰 Вы могли выиграть 241 250 ₽!</h3>
       <p>Попробуй прямо сейчас — удача может быть на твоей стороне.</p>
       <a href="https://t.me/samoletiklucky/3" target="_blank" class="tg-button">Испытать удачу</a>
     </div>
@@ -278,13 +278,8 @@
         video.muted = true;
         video.play();
       });
-    });
-
-    // Показываем уведомление сразу после окончания видео
-    video.addEventListener('ended', () => {
-      popup.classList.add('active');
+      setTimeout(() => popup.classList.add('active'), 13000);
     });
   </script>
 </body>
 </html>
-
